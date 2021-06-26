@@ -1,4 +1,4 @@
-const Departamentos = require('./departamentos');
+const Departamentos = require('../data/departamentos');
 
 const buscarDepartamento = (departamento = "") => {
     var posicion = -1;

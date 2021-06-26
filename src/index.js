@@ -1,8 +1,8 @@
 const express = require('express');
 const cors = require('cors');
 const app = express();
-const buscarDepartamento = require('./helpers');
-const Departamentos = require('./departamentos');
+const buscarDepartamento = require('../helpers/helpers');
+const Departamentos = require('../data/departamentos');
 require('dotenv').config()
 
 app.use(express.json());
