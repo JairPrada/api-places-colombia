@@ -16,6 +16,18 @@ app.get('/', (req, res) => {
         next()
     }
 })
+//? Obtener solo los departamentos
+app.get('/departamentos', (req, res) => {
+    if(Departamentos) {
+        const soloDepartamentos = Departamentos.map(({ id, departamento }) => {
+            return { id, departamento }
+        });
+        res.json(soloDepartamentos);
+    }
+    else {
+        next();
+    }
+})
 //? Obtener un departamento en especifico
 app.get('/:departamento', (req, res, next) => {
     const departamento = req.params.departamento;
